@@ -1,0 +1,286 @@
+:root{
+    --mainBackgroundColor: #BBE7FF;
+    --secondBackgroundColor: #BD95B7;
+    --thirdBackgroundColor: #E6B6DF;
+    --mainFontColor: #995AFF;
+    --secondFontColor: #350C78;
+    --margen: 3em;
+    font-family: 'Rum Raisin', sans-serif;
+}
+
+body{
+    margin: 0;
+
+    background-color: var(--secondBackgroundColor);
+}
+
+aside{
+    position: absolute;
+
+    z-index: 1;
+
+    width: 3em;
+    height: 100%;
+
+    border-radius: 2em 0 0 2em;
+
+    background-color: var(--thirdBackgroundColor);
+
+    transition: width 500ms;
+}
+
+aside::before{
+    content: '';
+    
+    display: block;
+
+    position: absolute;
+
+    z-index: 1;
+
+    width: 2em;
+    height: 3.5em;
+
+    border-top-left-radius: 2em;
+
+    margin-left: var(--margen);
+
+    box-shadow: 0 -30px 0 0 var(--thirdBackgroundColor);
+
+    background-color: transparent;
+
+    transition: margin-left 500ms;
+}
+
+aside::after{
+    content: '';
+    
+    display: block;
+
+    position: absolute;
+    
+    z-index: 1;
+
+    width: 2em;
+    height: 3.5em;
+
+    border-bottom-left-radius: 2em;
+
+    top: calc(100% - 3.5em);
+    margin-left: var(--margen);
+
+    box-shadow: 0 30px 0 0 var(--thirdBackgroundColor);
+
+    background-color: transparent;
+
+    transition: margin-left 500ms;
+}
+
+.container{
+    display: grid;
+
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 65vw 55vw 55vw 40vw;
+
+    height: 100%;
+
+    gap: 2em 0;
+
+    border-radius: 2em;
+    margin-left: 3em;
+
+    background-color: var(--mainBackgroundColor);
+
+    transition: margin-left 500ms;
+}
+
+.relative{
+    position: relative;
+}
+
+.center{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+/* TITLE */
+
+.title{
+    position: absolute;
+
+    width: 10%;
+
+    text-align: center;
+}
+
+.title h1{
+    font-size: 4.7vw;
+
+    color: var(--mainFontColor);
+}
+
+
+/* HOME */
+
+.home{
+    display: flex;
+    justify-content: center;
+
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.home svg{
+    position: absolute;
+    z-index: 1;
+
+    width: 60vw;
+    height: 30vw;
+}
+
+.imagen{
+    width: 60vw;
+    height: 50vw;
+
+    margin-top: 7vw;
+
+    border-radius: 8vw;
+
+    background-color: gray;
+}
+
+
+/* CATALOG */
+
+.catalog{
+    display: flex;
+
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.base{
+    display: grid;
+
+    width: 80vw;
+    height: 40vw;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    box-shadow: inset 0px 0px
+        10px rgba(0, 0, 0, 0.25);
+
+    border-radius: 40px;
+
+    background-color: var(--mainBackgroundColor);
+}
+
+.main{
+    width: 35vw;
+    height: 35vw;
+
+    box-shadow: 0px 4px
+        4px rgba(77, 72, 72, 0.52);
+
+    border-radius: 40px;
+
+    background: var(--thirdBackgroundColor);
+}
+
+.left{
+    width: 20vw;
+    height: 20vw;
+
+    box-shadow: 0px 4px
+        10px rgba(77, 72, 72, 0.52);
+
+    border-radius: 40px;
+
+    background: var(--secondBackgroundColor);
+}
+
+.right{
+    width: 20vw;
+    height: 20vw;
+
+    box-shadow: 0px 4px
+        4px rgba(77, 72, 72, 0.52);
+
+    border-radius: 40px;
+
+    background: var(--secondBackgroundColor);
+}
+
+
+/* LOGO */
+
+.logo{
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+
+/* CONTACT */
+
+.contact{
+    grid-column: 1/3;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 1fr);
+
+    justify-items: end;
+
+    border-radius: 2em 2em 0 2em;
+
+    background-color: var(--secondBackgroundColor);
+}
+
+.contact h1{
+    grid-column: 1/3;
+
+    margin-right: 5%;
+    margin-top: 0;
+
+    font-size: 7vw;
+    font-weight:normal;
+
+    color: var(--secondFontColor);
+}
+
+.contact a{
+    right: 5%;
+
+    font-size: 4vw;
+    font-weight: lighter;
+
+    color: #000;
+}
+
+.contact div{
+    grid-column: 1/3;
+    margin-right: 7%;
+
+    width: 80%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.contact svg{
+    width: 5vw;
+}
+
+.contact .facebook svg{
+    width: 6vw;
+}
+
+
+/* COLORES DE PRUEBA */
+
+.home, .catalog, .logo{
+    /* background-color: rgba(64, 177, 212, 0.63); */
+}
