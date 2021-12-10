@@ -6,20 +6,20 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var container = document.getElementById("container").style;
 
-    const e = "5em";
-    const l = "3em";
+    const e = "6vw";
+    const l = "3vw";
 
 
     function Enter() {
         container.marginLeft = e;
         aside.style.width = e;
-        document.documentElement.style.setProperty('--margen','5em');
+        document.documentElement.style.setProperty('--margen',e);
     }
 
     function Leave() {
         container.marginLeft = l; 
         aside.style.width = l;
-        document.documentElement.style.setProperty('--margen','3em');
+        document.documentElement.style.setProperty('--margen',l);
     }
 
 });
