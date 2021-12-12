@@ -123,6 +123,11 @@ aside::after{
 aside img{
     max-width: 100%;
     height: auto;
+    transition: filter 500ms;
+}
+
+aside img:hover{
+    filter: brightness(1.4);
 }
 
 
