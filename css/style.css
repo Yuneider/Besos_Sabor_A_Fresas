@@ -42,6 +42,10 @@ body{
     justify-items: center;
 }
 
+.marginTop{
+    margin-top: 5px;
+}
+
 
 /* ASIDE */
 
@@ -123,6 +127,7 @@ aside::after{
 aside img{
     max-width: 100%;
     height: auto;
+
     transition: filter 500ms;
 }
 
