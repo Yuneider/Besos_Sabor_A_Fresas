@@ -14,6 +14,41 @@ body{
     background-color: var(--secondBackgroundColor);
 }
 
+.container{
+    display: grid;
+
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 65vw 55vw 55vw 40vw;
+
+    height: 100%;
+
+    gap: 1vh 0;
+
+    border-radius: 2em;
+    margin-left: var(--margen);
+
+    background-color: var(--mainBackgroundColor);
+
+    transition: margin-left 500ms;
+}
+
+.relative{
+    position: relative;
+}
+
+.center{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.marginTop{
+    margin-top: 5px;
+}
+
+
+/* ASIDE */
+
 aside{
     position: absolute;
 
@@ -76,32 +111,28 @@ aside::after{
     transition: margin-left 500ms;
 }
 
-.container{
-    display: grid;
-
-    grid-template-columns: 10% 90%;
-    grid-template-rows: 65vw 55vw 55vw 40vw;
-
-    height: 100%;
-
-    gap: 2em 0;
-
-    border-radius: 2em;
-    margin-left: var(--margen);
-
-    background-color: var(--mainBackgroundColor);
-
-    transition: margin-left 500ms;
-}
-
-.relative{
-    position: relative;
-}
-
-.center{
-    align-items: center;
-    justify-content: center;
+.menuContainer{
+    position: fixed;
     justify-items: center;
+    top: 40vh;
+    left: 0;
+    transition: top 500ms;
+}
+
+.menuContainer div{
+    width: 3vw;
+    transition: width 500ms;
+}
+
+aside img{
+    max-width: 100%;
+    height: auto;
+
+    transition: filter 500ms;
+}
+
+aside img:hover{
+    filter: brightness(1.4);
 }
 
 
