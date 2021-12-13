@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function scrollToHome(){
         window.scrollTo({
-            top: vh*2,
+            top: vh*4,
             behavior: 'smooth'
         }); 
     }
