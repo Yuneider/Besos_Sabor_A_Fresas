@@ -7,6 +7,35 @@
     font-family: 'Rum Raisin', sans-serif;
 }
 
+
+/* GENERAL */
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+h1{
+    margin: 0;
+
+    font-size: 7vw;
+    font-weight:200;
+    color: var(--mainFontColor);
+}
+
+h3{
+    margin-top: 0;
+    margin-left: 3vw;
+
+    font-size: 3vw;
+    font-weight: normal;
+    color: #ffffff8e;
+}
+
+
+/* BODY */
+
 body{
     display: grid;
 
@@ -20,11 +49,8 @@ body{
     background-color: var(--secondBackgroundColor);
 }
 
-img{
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-}
+
+/* HEADER */
 
 .header{
     display: grid;
@@ -52,23 +78,6 @@ img{
     margin-left: 7vw;
 }
 
-h1{
-    margin: 0;
-
-    font-size: 7vw;
-    font-weight:200;
-    color: var(--mainFontColor);
-}
-
-h3{
-    margin-top: 0;
-    margin-left: 3vw;
-
-    font-size: 3vw;
-    font-weight: normal;
-    color: #ffffff8e;
-}
-
 .backButtonContainer{
     position: absolute;
 
@@ -79,6 +88,33 @@ h3{
     height: 4vw;
 }
 
+
+/* INFO */
+
 .info{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    align-items: center;
+    justify-items: center;
+
     background-color: var(--mainBackgroundColor);
+}
+
+.vision, .mission{
+    width: 30vw;
+    height: 40vh;
+
+    text-align: center;
+
+    border: 5px dashed #BDB7C7;
+    border-radius: 400px;
+
+    background: rgba(198, 191, 209, 0.3);
+}
+
+.vision h1, .mission h1{
+    margin: 5px;
+    font-size: 5vw;
 }
