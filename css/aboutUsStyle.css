@@ -112,6 +112,9 @@ body{
     border-radius: 400px;
 
     background: rgba(198, 191, 209, 0.3);
+
+    transition: 500ms;
+
 }
 
 .vision h1, .mission h1{
