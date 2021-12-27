@@ -22,6 +22,8 @@ h1{
     font-size: 7vw;
     font-weight:200;
     color: var(--mainFontColor);
+
+    transition: font-size 500ms;
 }
 
 h3{
@@ -31,6 +33,8 @@ h3{
     font-size: 3vw;
     font-weight: normal;
     color: #ffffff8e;
+
+    transition: font-size 500ms;
 }
 
 
@@ -86,6 +90,10 @@ body{
 
     width: 4vw;
     height: 4vw;
+
+    cursor: pointer;
+
+    transition: 500ms;
 }
 
 
@@ -114,7 +122,6 @@ body{
     background: rgba(198, 191, 209, 0.3);
 
     transition: 500ms;
-
 }
 
 .vision h1, .mission h1{

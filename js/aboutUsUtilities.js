@@ -4,11 +4,15 @@ document.addEventListener('DOMContentLoaded',function () {
     const header = document.getElementById("header");
     const mission = document.getElementById("mission");
     const vision = document.getElementById("vision");
+    const backButton = document.getElementById("backButtonContainer");
+    const h1 = document.getElementById("h1");
+    const h3 = document.getElementById("h3");
 
     mission.addEventListener('mouseenter',EnterMission);
     mission.addEventListener('mouseleave',LeaveMission);
     vision.addEventListener('mouseenter',EnterVision);
     vision.addEventListener('mouseleave',LeaveVision);
+    backButton.addEventListener('click',backButtonClick);
 
     var moveUp, moveDown, head, info;
 
@@ -20,11 +24,21 @@ document.addEventListener('DOMContentLoaded',function () {
     const leaveBorder = "5px dashed #BDB7C7";
     const leaveHeight = "40vh";
     const leaveWidth = "30vw";
+    const h1EnterSize = "6vw";
+    const h1LeaveSize = "7vw";
+    const h3EnterSize = "2vw";
+    const h3LeaveSize = "3vw";
+    const backButtonEnter = "3vw";
+    const backButtonLeave = "4vw";
 
     function EnterMission() {
         head = 40;
         info = 60;
         moveUp = setInterval(HeaderUp,15);
+        h1.style.fontSize = h1EnterSize;
+        h3.style.fontSize = h3EnterSize;
+        backButton.style.width = backButtonEnter;
+        backButton.style.height = backButtonEnter;
         mission.style.background = enterColor;
         mission.style.border = enterBorder;
         mission.style.height = enterHeight;
@@ -35,6 +49,10 @@ document.addEventListener('DOMContentLoaded',function () {
         head = 30;
         info = 70;
         moveDown = setInterval(HeaderDown,15);
+        h1.style.fontSize = h1LeaveSize;
+        h3.style.fontSize = h3LeaveSize;
+        backButton.style.width = backButtonLeave;
+        backButton.style.height = backButtonLeave;
         mission.style.background = leaveColor;
         mission.style.border = leaveBorder;
         mission.style.height = leaveHeight;
@@ -45,6 +63,10 @@ document.addEventListener('DOMContentLoaded',function () {
         head = 40;
         info = 60;
         moveUp = setInterval(HeaderUp,15);
+        h1.style.fontSize = h1EnterSize;
+        h3.style.fontSize = h3EnterSize;
+        backButton.style.width = backButtonEnter;
+        backButton.style.height = backButtonEnter;
         vision.style.background = enterColor;
         vision.style.border = enterBorder;
         vision.style.height = enterHeight;
@@ -55,6 +77,10 @@ document.addEventListener('DOMContentLoaded',function () {
         head = 30;
         info = 70;
         moveDown = setInterval(HeaderDown,15);
+        h1.style.fontSize = h1LeaveSize;
+        h3.style.fontSize = h3LeaveSize;
+        backButton.style.width = backButtonLeave;
+        backButton.style.height = backButtonLeave;
         vision.style.background = leaveColor;
         vision.style.border = leaveBorder;
         vision.style.height = leaveHeight;
@@ -83,6 +109,10 @@ document.addEventListener('DOMContentLoaded',function () {
             body.style.gridTemplateRows = "40vh 60vh";
             clearInterval(moveDown);
         }
+    }
+
+    function backButtonClick() {
+        location.replace("../index.html");
     }
 
 });
