@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded',function () {
     mission.addEventListener('mouseleave',LeaveMission);
     vision.addEventListener('mouseenter',EnterVision);
     vision.addEventListener('mouseleave',LeaveVision);
-    backButton.addEventListener('click',backButtonClick);
+    backButton.addEventListener('click',BackButtonClick);
+    backButton.addEventListener('mouseenter',BackButtonEnter);
+    backButton.addEventListener('mouseleave',BackButtonLeave);
 
     var moveUp, moveDown, head, info;
 
@@ -28,8 +30,9 @@ document.addEventListener('DOMContentLoaded',function () {
     const h1LeaveSize = "7vw";
     const h3EnterSize = "2vw";
     const h3LeaveSize = "3vw";
-    const backButtonEnter = "3vw";
-    const backButtonLeave = "4vw";
+    const backButtonEnter = "1vw";
+    const backButtonLeave = "2vw";
+    const backButtonHover = "3vw";
 
     function EnterMission() {
         head = 40;
@@ -111,8 +114,18 @@ document.addEventListener('DOMContentLoaded',function () {
         }
     }
 
-    function backButtonClick() {
+    function BackButtonClick() {
         location.replace("../index.html");
+    }
+
+    function BackButtonEnter() {
+        backButton.style.width = backButtonHover;
+        backButton.style.height = backButtonHover;
+    }
+
+    function BackButtonLeave() {
+        backButton.style.width = backButtonLeave;
+        backButton.style.height = backButtonLeave;
     }
 
 });
