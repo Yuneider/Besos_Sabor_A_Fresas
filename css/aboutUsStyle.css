@@ -1,0 +1,132 @@
+:root{
+    --mainBackgroundColor: #BBE7FF;
+    --secondBackgroundColor: #BD95B7;
+    --thirdBackgroundColor: #E6B6DF;
+    --mainFontColor: #995AFF;
+    --secondFontColor: #350C78;
+    font-family: 'Rum Raisin', sans-serif;
+}
+
+
+/* GENERAL */
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+
+    transition: 500ms;
+}
+
+h1{
+    margin: 0;
+
+    font-size: 7vw;
+    font-weight:200;
+    color: var(--mainFontColor);
+
+    transition: font-size 500ms;
+}
+
+h3{
+    margin-top: 0;
+    margin-left: 3vw;
+
+    font-size: 3vw;
+    font-weight: normal;
+    color: #ffffff8e;
+
+    transition: font-size 500ms;
+}
+
+
+/* BODY */
+
+body{
+    display: grid;
+
+    grid-template-rows: 40vh 60vh;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+
+    background-color: var(--secondBackgroundColor);
+}
+
+
+/* HEADER */
+
+.header{
+    display: grid;
+
+    grid-template-columns: 63vw 30vw;
+    grid-template-rows: 40vh;
+
+    border-radius: 2em 2em 0 0;
+
+    background-color: var(--thirdBackgroundColor);
+}
+
+.imgContainer{
+    display: flex;
+
+    align-items: end;
+    justify-content: center;
+}
+
+.textContainer{
+    display: flex;
+
+    align-items: center;
+
+    margin-left: 7vw;
+}
+
+.backButtonContainer{
+    position: absolute;
+
+    top: 1vw;
+    left: 1vw;
+
+    width: 2vw;
+    height: 2vw;
+
+    cursor: pointer;
+
+    transition: 500ms;
+}
+
+
+/* INFO */
+
+.info{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    align-items: center;
+    justify-items: center;
+
+    background-color: var(--mainBackgroundColor);
+}
+
+.vision, .mission{
+    width: 30vw;
+    height: 40vh;
+
+    text-align: center;
+
+    border: 5px dashed #BDB7C7;
+    border-radius: 400px;
+
+    background: rgba(198, 191, 209, 0.3);
+
+    transition: 500ms;
+}
+
+.vision h1, .mission h1{
+    margin: 5px;
+    font-size: 5vw;
+}
